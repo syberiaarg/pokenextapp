@@ -1,0 +1,4 @@
+$height-header: 6.25rem;
+$height-header-mobile: 5rem;
+$min-height-main: calc(100vh - #{$height-header});
+$min-height-main-mobile: calc(100vh - #{$height-header-mobile});

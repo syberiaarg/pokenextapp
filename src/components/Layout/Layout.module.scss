@@ -1,0 +1,26 @@
+@use "@css/variables" as variables;
+@use "@css/mixins" as mixins;
+@use "@css/responsives" as responsives;
+
+.layout {
+  @include mixins.flex_container(row, center, flex-start);
+  width: 100%;
+
+  > .content {
+    @include mixins.flex_container(row, center, flex-start);
+    padding-top: variables.$height-header;
+    width: 75rem;
+    min-height: variables.$min-height-main;
+    padding-bottom: 7rem;
+
+    @include responsives.extraLarge {
+      min-height: variables.$min-height-main-mobile;
+      max-width: 100%;
+      padding-bottom: 2rem;
+    }
+
+    @include responsives.large {
+      padding-top: 5rem;
+    }
+  }
+}
