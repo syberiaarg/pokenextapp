@@ -6,7 +6,7 @@
   @include mixins.flex_container(row, center, flex-start);
   width: 100%;
 
-  > .content {
+  >.content {
     @include mixins.flex_container(row, center, flex-start);
     padding-top: variables.$height-header;
     width: 75rem;
