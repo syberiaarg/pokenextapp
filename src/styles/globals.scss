@@ -1,9 +1,40 @@
+@use "../css/colors" as colors;
+@use "../css/fonts" as fonts;
+@use "../css/responsives" as responsives;
+
+@font-face {
+  font-family: "Oswald-Light";
+  src: local("Oswald-Light"),
+    url("../assets/fonts/Oswald-Light.ttf") format("truetype");
+  font-weight: regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Regular"),
+    url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: local("Stolzl-Bold"),
+    url("../assets/fonts/Stolzl-Bold.ttf") format("truetype");
+  font-weight: regular;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -67,6 +98,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: fonts.$font-oswald;
 }
 
 html,
