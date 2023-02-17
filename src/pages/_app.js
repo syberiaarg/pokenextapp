@@ -1,8 +1,8 @@
-import '@styles/globals.scss'
-import Head from 'next/head'
+import Layout from "@components/Layout";
+import "@styles/globals.scss";
+import Head from "next/head";
 
 const App = ({ Component, pageProps }) => (
-
   <>
     <Head>
       <title>Pokenext App</title>
@@ -11,8 +11,10 @@ const App = ({ Component, pageProps }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Component {...pageProps} />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   </>
-)
+);
 
-export default App
+export default App;
