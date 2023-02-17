@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <Home />
+      <h1>Time to code...</h1>
     </>
   );
 }
