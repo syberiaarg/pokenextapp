@@ -1,9 +1,10 @@
 import Navbar from "./components/Navbar";
 import SelectType from "./components/SelectType";
 import Image from "next/image";
-import HeaderImage from "../assets/pokenextlogo.png"
+import HeaderImage from "../assets/pokelogotransparent.png"
 import React, { useState, useEffect } from "react";
 import { getPokemons, getTypes } from "../services"
+import styles from './Index.module.scss'
 
 export default function Home() {
 
@@ -22,16 +23,18 @@ export default function Home() {
   return (
     <>
       <main>
-        <header>
-          <div>
-            <Image src={HeaderImage} alt={'Pokemon App Logo'}></Image>
+        <header className={styles.header}>
+          <div className={styles.logo}>
+            <Image src={HeaderImage} width={250} alt={'Pokemon App Logo'}></Image>
           </div>
-          <Navbar titles={navTitles} />
+          <div>
+            <Navbar titles={navTitles} />
+          </div>
         </header>
-        <div>
+        <div className={styles.body}>
           <SelectType types={typeList} />
         </div>
-        <footer>
+        <footer className={styles.footer}>
           © Pokenextapp 2023
         </footer>
       </main>

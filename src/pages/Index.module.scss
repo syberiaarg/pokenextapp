@@ -1,0 +1,36 @@
+@use "@css/variables" as variables;
+@use "@css/mixins" as mixins;
+@use "@css/responsives" as responsives;
+
+
+.header {
+
+    @include mixins.flex_container(row, space-between, center);
+    height: 12vh;
+    width: 100%;
+    background-color: #221b3f;
+    border-bottom: 1.5px solid #2a75bb;
+
+
+}
+
+.logo {
+
+    margin-left: 10px;
+}
+
+
+.body {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.footer {
+
+    @include mixins.flex_container(row, center, center);
+    height: 12vh;
+    width: 100%;
+    background-color: #221b3f;
+    border-top: 1.5px solid #2a75bb;
+}

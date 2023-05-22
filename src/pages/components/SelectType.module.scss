@@ -1,0 +1,17 @@
+@use "@css/mixins" as mixins;
+
+.wrap {
+    @include mixins.flex_container(row, space-between, center);
+
+    width: 50%;
+    border: 1.5px solid #2a75bb;
+    margin: 10px;
+
+}
+
+.typeList {
+
+    text-overflow: clip;
+
+
+}

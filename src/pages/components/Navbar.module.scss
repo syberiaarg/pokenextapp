@@ -3,10 +3,13 @@
 @use "@css/responsives" as responsives;
 
 
-.nav {
-    @include mixins.flex_container(row, space-between, flex-start);
-    width: 100%;
+.navWrap {
+
+    width: 50vw;
+}
+
+.navList {
     list-style-type: none;
-    margin-top: 1em;
-    margin-bottom: 2em;
+    @include mixins.flex_container(row, space-evenly, flex-end);
+
 }
